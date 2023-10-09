@@ -64,10 +64,9 @@ app.get("/google/redirect", async (req, res) => {
     const { tokens } = await oauth2Client.getToken(code);
     oauth2Client.setCredentials(tokens);
 
-    const calendarId = "dilanweerasinghe97@gmail.com"; // Replace with your calendar ID
-    const startTime = "2023-09-01T00:00:00Z"; // Replace with your desired start time.
-    const endTime = "2023-09-30T23:59:59Z"; // Replace with your desired end time.
-
+    const calendarId = "dilanweerasinghe97@gmail.com"; 
+    const startTime = "2023-09-01T00:00:00Z"; 
+    const endTime = "2023-09-30T23:59:59Z"; 
     const busyIntervals = await listBusyIntervals(
       calendarId,
       startTime,
